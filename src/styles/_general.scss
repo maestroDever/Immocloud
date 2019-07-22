@@ -1,0 +1,15 @@
+html {
+  font-weight: 100;
+  font-size: $font-size-initial;
+}
+
+body {
+  color: $text-color;
+  font-family: $font-family-base;
+}
+
+html,
+body,
+#app {
+  height: 100%;
+}
