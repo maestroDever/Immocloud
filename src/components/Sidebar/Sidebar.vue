@@ -10,7 +10,6 @@
         <b-form-input size="sm" class="mr-sm-2" placeholder="Search"></b-form-input>
       </b-nav-item>
       <b-nav-item>
-        <i class="fa fa-glass"></i>
         Dashboard
       </b-nav-item>
       <b-nav-item>Objekte</b-nav-item>
