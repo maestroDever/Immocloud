@@ -1,0 +1,39 @@
+
+@import '../../styles/variables';
+
+.card {
+  max-width: 20rem;
+  padding: .4rem;
+  box-shadow: 1px 2px 12px rgba(0, 0, 0, .4);
+  cursor: pointer;
+  display: grid;
+  grid-template-rows: 1fr 200px 1fr;
+
+  &:active,
+  &:focus {
+    border: 1px solid pink;
+  }
+
+  .card-header {
+    background-color: transparent;
+    border: none;
+    color: $color-text-grey;
+
+    .header-text {
+      text-transform: uppercase;
+      font-size: $font-size-sm;
+    }
+
+    .icon-right {
+      position: absolute;
+      right: 2rem;
+    }
+  }
+  .card-body {
+
+  }
+  .card-footer {
+    background-color: transparent;
+    border: none;
+  }
+}

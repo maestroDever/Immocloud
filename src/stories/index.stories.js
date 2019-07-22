@@ -4,6 +4,7 @@ import { action } from '@storybook/addon-actions'
 import { linkTo } from '@storybook/addon-links'
 
 import MyButton from '../components/MyButton.vue'
+import Card from '@/components/Card/Card.vue'
 
 storiesOf('Button', module)
   .add('with text', () => ({
@@ -22,4 +23,10 @@ storiesOf('Button', module)
     components: { MyButton },
     template: '<my-button @click="action">😀 😎 👍 💯</my-button>',
     methods: { action: action('clicked') }
+  }))
+
+storiesOf('Card', module)
+  .add('with dummy lorem ipsum', () => ({
+    components: { Card },
+    template: '<card />'
   }))
