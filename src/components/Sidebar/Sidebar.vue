@@ -4,7 +4,7 @@
   >
     <b-navbar-nav>
       <b-navbar-brand>
-        immocloud
+        <img src="../../assets/logo.png" alt="logo" class="responsive">
       </b-navbar-brand>
       <b-nav-item>
         <b-form-input size="sm" class="mr-sm-2" placeholder="Search"></b-form-input>
@@ -23,7 +23,7 @@
 @import '../../styles/variables';
   .sidebar {
     display: block;
-    background-color: rgb(185, 62, 62);
+    background-color: $sidebar-bg-color;
     position: fixed;
     top: 0;
     left: 0;
