@@ -3,8 +3,10 @@ import './plugins/bootstrap-vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
+import VueCircleSlider from 'vue-circle-slider'
 
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+Vue.use(VueCircleSlider)
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
