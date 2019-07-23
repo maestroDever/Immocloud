@@ -1,5 +1,5 @@
 <template>
-  <b-button class="tag">
+  <b-button class="tag" @click="selectTag" ref="tag">
     {{ title }}
   </b-button>
 </template>
@@ -7,7 +7,18 @@
 <script>
 export default {
   name: 'Tag',
-  props: ['title', 'popover']
+  props: ['title', 'popover'],
+  methods: {
+    selectTag () {
+      this.$emit('selectTag')
+    },
+    setActive () {
+      this.$refs.tag.classList.add('active')
+    },
+    setInactive () {
+      this.$refs.tag.classList.remove('active')
+    }
+  }
 }
 </script>
 
@@ -30,6 +41,12 @@ export default {
 
     &:focus {
       outline: none !important;
+    }
+
+    &.active {
+      background-color: $color-text-green !important;
+      border-color: $color-text-green !important;
+      outline: none;
     }
   }
 </style>

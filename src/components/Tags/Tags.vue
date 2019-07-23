@@ -5,8 +5,10 @@
       :key="index"
       :title="tag.title"
       :popover="tag.popover"
+      ref="tags"
+      @selectTag="selectTag(index)"
     />
-    <tag
+    <!-- <tag
       title="asdf"
       id="tag"
       @click="onClick"
@@ -16,7 +18,7 @@
       target="tag"
     >
       Hello world
-    </b-popover>
+    </b-popover> -->
   </div>
 </template>
 
@@ -39,6 +41,12 @@ export default {
   methods: {
     onClick () {
       this.$refs.popover.$emit('open')
+    },
+    selectTag (id) {
+      this.$refs.tags[id].setActive()
+      this.$refs.tags.forEach((node, index) => {
+        if (id !== index) this.$refs.tags[index].setInactive()
+      })
     }
   }
 }
