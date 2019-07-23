@@ -30,3 +30,33 @@ a {
     color: $color-purple;
   }
 }
+
+button:focus,
+input:focus {
+  outline: none;
+}
+
+.popover {
+  color: red;
+  background-color: transparent;
+  border: 2px dashed $color-purple;
+  font-size: $font-size-lg;
+
+  .arrow {
+    width: 3rem;
+    height: 2rem;
+    transform: rotate(147deg) skew(58deg, 0deg);
+    background-color: transparent;
+    border: 2px dashed $color-purple;
+    z-index: -1;
+
+    &::after, &::before {
+      display: none;
+    }
+  }
+
+  &-body {
+    z-index: 2;
+    background-color: #eee;
+  }
+}
