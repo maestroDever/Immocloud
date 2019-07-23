@@ -1,9 +1,17 @@
 <template>
   <div class="home">
-    <card />
-    <tags />
-    <card-swiper />
-    <ring-slider :val="68" comment="Mieter haben bezahlt" />
+    <div class="m-3 text-center">
+      <card />
+    </div>
+    <div class="m-3 text-center">
+      <tags />
+    </div>
+    <div class="m-3 text-center">
+      <card-swiper />
+    </div>
+    <div class="m-3 text-center">
+      <ring-slider :val="68" comment="Mieter haben bezahlt" />
+    </div>
   </div>
 </template>
 

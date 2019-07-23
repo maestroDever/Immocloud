@@ -1,5 +1,5 @@
 <template>
-  <section class="cards-swiper">
+  <section class="cards-swiper mb-5">
     <div class="container">
       <div class="cards-swiper-wrapper">
         <swiper ref="cardSwiper" :options="swiperOptions" class="card-swiper">
@@ -62,17 +62,12 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import '../../styles/variables';
-  .swiper-button-next,
-  .swiper-button-prev {
-    background-image: none !important;
-  }
 
-  .swiper-slide {
-    width: auto;
-    height: auto;
-  }
+.cards-swiper-wrapper {
+  position: relative;
+}
 
   .swiper-pagination {
     left: 50%;
@@ -93,16 +88,24 @@ export default {
     }
   }
 
+  .swiper-button-next,
+  .swiper-button-prev {
+    background-image: none !important;
+  }
+
   .swiper-button-next {
-    top: 62%;
-    right: 10%;
+    bottom: -5rem;
+    right: 0;
+    top: unset;
     color: $color-purple;
     width: auto;
   }
-</style>
 
-<style lang="scss">
-@import '../../styles/variables';
+  .swiper-slide {
+    width: auto;
+    height: auto;
+  }
+
 .swiper-pagination {
   left: 50%;
   transform: translateX(-50%);
